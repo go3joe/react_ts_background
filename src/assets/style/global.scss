@@ -1,0 +1,17 @@
+$color:#eee;
+body{
+    background-color: $color;
+    //禁用选择文字功能
+    user-select: none;
+}
+img{
+    //禁止拖动图片
+    -webkit-user-drag: none;
+}
+
+//给主页面定义一个log的外边框
+.demo-logo-vertical{
+    height: 32px;
+    margin: 16px;
+    background: rgba(255,255,255,0.3);
+}
