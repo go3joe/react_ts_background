@@ -26,7 +26,18 @@
       "@/*":[
         "src/*"
       ]
-    }
+    },
+
+    /* 
+      告诉 TypeScript 编译器忽略这种隐式 any 类型的索引错误，即不将其视为错误而是警告。
+      解决MainMenu中
+      if(items[i]!['children'] && items[i]!['children'].length > 0 && items[i]!['children'].find(findkey)){
+            lastOpenKey = items[i]!.key
+            break;
+        }
+    */
+    "ignoreDeprecations": "5.0",
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
